@@ -10,3 +10,12 @@ def cars(request):
         'mycars': mycars,
     }
     return HttpResponse(template.render(context, request))
+
+
+def details(request, id):
+    car = Car.objects.get(id=id)
+    template = loader.get_template('details.html')
+    context = {
+        'car': car,
+    }
+    return HttpResponse(template.render(context, request))

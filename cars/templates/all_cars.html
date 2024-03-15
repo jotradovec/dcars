@@ -5,9 +5,9 @@
 <h1>All Cars</h1>
 
 <ul>
-  {% for x in mycars %}
-    <li>{{ x.name }}</li>
-  {% endfor %}
+    {% for car in mycars %}
+    <li><a href="details/{{ car.id }}">{{ car.name }}</a></li>
+    {% endfor %}
 </ul>
 
 </body>
