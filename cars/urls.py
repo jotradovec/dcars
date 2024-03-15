@@ -4,6 +4,6 @@ from . import views
 prefix = "cars"
 
 urlpatterns = [
-    path(prefix+'/', views.members, name=prefix),
+    path(prefix+'/', views.cars, name=prefix),
 ]
 
