@@ -6,7 +6,7 @@
 
 <ul>
     {% for car in mycars %}
-    <li><a href="details/{{ car.id }}">{{ car.name }}</a></li>
+    <li><a href="{{ car.id }}">{{ car.name }}</a></li>
     {% endfor %}
 </ul>
 
