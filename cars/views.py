@@ -4,10 +4,10 @@ from .models import Car
 
 
 def cars(request):
-    mycars = Car.objects.all().values()
+    car_list = Car.objects.all().values()
     template = loader.get_template('all_cars.html')
     context = {
-        'mycars': mycars,
+        'mycars': car_list,
     }
     return HttpResponse(template.render(context, request))
 
@@ -19,3 +19,8 @@ def details(request, id):
         'car': car,
     }
     return HttpResponse(template.render(context, request))
+
+
+def main(request):
+    template = loader.get_template('main.html')
+    return HttpResponse(template.render())
