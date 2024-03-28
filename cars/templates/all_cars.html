@@ -1,14 +1,18 @@
-<!DOCTYPE html>
-<html>
-<body>
+{% extends "master.html" %}
 
-<h1>All Cars</h1>
+{% block headtitle %}
+  All cars list
+{% endblock %}
 
-<ul>
+{% block title %}
+  All cars list
+{% endblock %}
+
+{% block content %}
+  <ul>
     {% for car in mycars %}
     <li><a href="{{ car.id }}">{{ car.name }}</a></li>
     {% endfor %}
-</ul>
+  </ul>
+{% endblock %}
 
-</body>
-</html>
