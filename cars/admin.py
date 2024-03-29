@@ -1,4 +1,9 @@
 from django.contrib import admin
 from .models import Car
 
-admin.site.register(Car)
+
+class CarAdmin(admin.ModelAdmin):
+    list_display = ('name', 'maximum_speed', 'acquired_date')
+
+
+admin.site.register(Car, CarAdmin)
