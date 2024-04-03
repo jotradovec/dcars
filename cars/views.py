@@ -4,7 +4,7 @@ from .models import Car
 
 
 def cars(request):
-    car_list = Car.objects.all().values('id', 'name')
+    car_list = Car.objects.filter(operational=True).values('id', 'name')
     template = loader.get_template('all_cars.html')
     context = {
         'mycars': car_list,
