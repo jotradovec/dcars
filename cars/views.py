@@ -5,9 +5,12 @@ from .models import Car
 
 def cars(request):
     car_list = Car.objects.filter(operational=True).order_by('name').values('id', 'name')
+    cars_by_speed = Car.objects.filter(maximum_speed__gt=0).order_by('-maximum_speed').values('id', 'name',
+                                                                                              'maximum_speed')
     template = loader.get_template('all_cars.html')
     context = {
-        'mycars': car_list,
+        'all_cars': car_list,
+        'speed_cars': cars_by_speed,
     }
     return HttpResponse(template.render(context, request))
 
