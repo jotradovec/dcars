@@ -1,0 +1,13 @@
+body {
+  background-color: rgb(20, 69, 61);
+  color: white;
+  font-family: verdana;
+
+  h1 {
+    color: black;
+    background-color: rgb(67, 197, 158);
+  }
+}
+footer {
+  background-color: rgb(61, 112, 104);
+}

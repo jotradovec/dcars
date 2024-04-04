@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
+{% load static %}
 <head>
+  <link rel="stylesheet" href="{% static 'initial.css' %}">
   <title>{% block headtitle %}{% endblock %}</title>
 </head>
 <body>
@@ -11,4 +13,7 @@
 {% block content %}
 {% endblock %}
 </body>
+<footer>
+  <p>Fastare | Jaroslav Otradovec |All rights reserved. </p>
+</footer>
 </html>
