@@ -1,17 +1,18 @@
 {% extends "master.html" %}
 
-{% block title %}
-  {{ car.name }}
-{% endblock %}
-
 {% block headtitle %}
   {{ car.name }}
 {% endblock %}
 
 {% block content %}
+  <div class="mycard">
+    <h1>{{ car.name }}</h1>
 
-<p>Maximum Speed: {{ car.maximum_speed }}</p>
-<p>In fleet since: {{ car.acquired_date }}</p>
+    <ul>
+<li>Maximum Speed: {{ car.maximum_speed }}</li>
+<li>In fleet since: {{ car.acquired_date }}</li>
+    </ul>
+  </div>
 
 <p>Back to <a href="/cars">Cars</a></p>
 {% endblock %}
