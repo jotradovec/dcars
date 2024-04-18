@@ -2,12 +2,21 @@ body {
   background-color: rgb(20, 69, 61);
   color: white;
   font-family: verdana;
-
+  padding: 5px;
   h1 {
     color: black;
     background-color: rgb(67, 197, 158);
+    padding: 5px;
   }
 }
 footer {
   background-color: rgb(61, 112, 104);
+  text-align: center;
+  width: 100%;
+  padding: 5px;
+  border: 2px solid gray;
+}
+
+a {
+  color: white;
 }
