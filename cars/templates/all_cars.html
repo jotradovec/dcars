@@ -12,7 +12,7 @@
 
     <ul>
     {% for car in all_cars %}
-    <li><a href="{{ car.id }}">{{ car.name }}</a></li>
+    <li><a href="{{ car.slug }}">{{ car.name }}</a></li>
     {% endfor %}
   </ul>
     </div>
@@ -22,7 +22,7 @@
 <h1>Fastest cars in our fleet</h1>
   <ul>
     {% for car in speed_cars %}
-    <li><a href="{{ car.id }}">{{ car.name }}</a> has a speed of {{ car.maximum_speed }} km/h</li>
+    <li><a href="{{ car.slug }}">{{ car.name }}</a> has a speed of {{ car.maximum_speed }} km/h</li>
     {% endfor %}
   </ul>
 </div>

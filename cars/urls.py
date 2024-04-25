@@ -6,6 +6,6 @@ prefix = "cars"
 urlpatterns = [
     path('', views.main, name=prefix),
     path(prefix+'/', views.cars, name=prefix),
-    path(prefix+'/<int:id>', views.details, name='details'),
+    path(prefix+'/<slug:slug>', views.details, name='details'),
 ]
 

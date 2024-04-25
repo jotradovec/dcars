@@ -6,6 +6,7 @@ class Car(models.Model):
     maximum_speed = models.IntegerField(null=True, blank=True)
     acquired_date = models.DateField(null=True)
     operational = models.BooleanField(default=True)
+    slug = models.SlugField(default="", null=False)
 
     def __str__(self):
         return self.name
